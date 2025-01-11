@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Problem1 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+       //Take input
+        System.out.println("Enter firstno : ");
+        int number1 = input.nextInt();
+
+        System.out.println("Enter Second no : ");
+        int number2 = input.nextInt();
+
+        int quotient = number1 / number2;
+        int remainder = number1 % number2;
+
+        System.out.println("The Quotient is " + quotient + " and Remainder is " + remainder +
+                " of two numbers " + number1 + " and " + number2);
+    }
+}
