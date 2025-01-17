@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class MaximumOfThreeNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Taking input from the user for three numbers
+        int num1 = getInput(scanner, "Enter the first number: ");
+        int num2 = getInput(scanner, "Enter the second number: ");
+        int num3 = getInput(scanner, "Enter the third number: ");
+        
+        // Calculating the maximum value
+        int max = findMaximum(num1, num2, num3);
+        
+        // Display the result
+        System.out.println("The maximum value is: " + max);
+    }
+
+    // Function to take input from the user
+    private static int getInput(Scanner scanner, String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    // Function to calculate the maximum of three numbers
+    private static int findMaximum(int num1, int num2, int num3) {
+        int max = num1;  // Assume num1 is the maximum
+
+        if (num2 > max) {
+            max = num2;  // If num2 is greater than max, update max
+        }
+
+        if (num3 > max) {
+            max = num3;  // If num3 is greater than max, update max
+        }
+
+        return max;
+    }
+}
